@@ -3,6 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NetworkInterceptor } from './interceptors/network.interceptor';
+import { PipesModule } from './pipes/pipes.module';
+import { MaterialsModule } from './materials.module';
 
 @NgModule({
   declarations: [
@@ -10,9 +16,18 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+
+    MaterialsModule,
+
+    PipesModule,
+
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: NetworkInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
