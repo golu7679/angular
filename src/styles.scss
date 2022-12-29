@@ -1,4 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Add application styles & imports to this file! */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import "assets/scss/variables";
+@import "src/app/custom/snackbar/theme1/custom";
+
+
+.bg-error {
+    background-color: var(--error) !important;
+    color: white !important;
+}
+
+.bg-success {
+    background-color: var(--success) !important;
+    color: white !important;
+}
+
+.bg-warning {
+    background-color: var(--warning) !important;
+    color: white !important;
+}
+
+.bg-info {
+    background-color: var(--info) !important;
+    color: white !important;
+}
+
+.bg-grey {
+    background-color: var(--grey) !important;
+    color: white !important;
+}

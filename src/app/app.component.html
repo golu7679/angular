@@ -1,20 +1,57 @@
-<p>{{'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel nisi quam facere quasi dolor incidunt, quas non\
-    ratione optio omnis in explicabo aut? Eum minus in repellat asperiores veritatis tempore dignissimos quas debitis\
-    aperiam eaque molestias, ipsa, odio omnis consectetur quo, sequi eveniet fugit nostrum voluptatem commodi dolore\
-    dolor rem tempora. Illum pariatur cum deserunt adipisci esse nemo harum consequuntur, repudiandae mollitia repellat\
-    quibusdam vel iure aut. Tempora reprehenderit quam omnis eum consequatur pariatur harum assumenda porro, officia\
-    veniam rem corrupti, unde facilis aliquam! Odit ex culpa ea! Est laboriosam quis quos facere obcaecati? Quas quod\
-    voluptatem eveniet unde eligendi repellat, sed vero quam recusandae, iure nam culpa nisi nulla minima optio illo\
-    nesciunt quae libero eum accusantium placeat? Voluptates eum repellendus ut mollitia. Beatae eligendi reprehenderit\
-    sed odio, laboriosam qui dolorem similique aliquam tempore repellat temporibus maxime, aut exercitationem\
-    consectetur quisquam ab inventore? Quasi temporibus id numquam officiis eum ipsum possimus, laudantium maxime\
-    quidem ipsam aliquid tenetur libero atque, sit fugiat vero hic. Velit harum eveniet dignissimos saepe provident\
-    ipsum rerum id sapiente delectus numquam quisquam porro commodi nemo deserunt distinctio, perferendis, suscipit\
-    officia minima ad aperiam voluptas, magnam adipisci. Natus fuga necessitatibus beatae aut voluptatum tempora\
-    debitis commodi dolorum dolores? Commodi quidem doloremque vitae ea ducimus, mollitia doloribus, cum odio, fuga\
-    praesentium ipsam omnis expedita explicabo itaque sunt vel ut quia at veritatis minima atque eius dolores cumque!\
-    Asperiores dolorem dicta numquam sunt, eaque, aut hic nostrum voluptates assumenda libero eligendi quos! Minus ad\
-    voluptatem eaque repudiandae assumenda.' | test: ['200', '...']}}
-</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            SnackBars
+        </mat-card-title>
+    </mat-card-header>
 
+    <mat-card-content>
 
+        <mat-card>
+            <mat-card-title>
+                Default
+            </mat-card-title>
+
+            <mat-card-content>
+                <button mat-raised-button color="primary">
+                    Default snackbar
+                </button>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-title>
+                Custom theme 1
+            </mat-card-title>
+            <mat-card-content>
+                <button mat-raised-button class="bg-success mx-2"
+                    (click)="snackBarTheme1Service.success('success')">Show
+                    Success
+                    Snack
+                    Bar</button>
+                <button mat-raised-button class="bg-warning"
+                    (click)="snackBarTheme1Service.warning('warning')">Warning</button>
+                <button mat-raised-button class="bg-error" (click)="snackBarTheme1Service.error('hi')">error</button>
+                <button mat-raised-button class="bg-info" (click)="snackBarTheme1Service.info('hi')">info</button>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-title>
+                Custom theme
+            </mat-card-title>
+            <mat-card-content>
+                <button mat-raised-button class="bg-success mx-2"
+                    (click)="snackBarTheme1Service.success('success')">Show
+                    Success
+                    Snack
+                    Bar</button>
+                <button mat-raised-button class="bg-warning"
+                    (click)="snackBarTheme1Service.warning('warning')">Warning</button>
+                <button mat-raised-button class="bg-error" (click)="snackBarTheme1Service.error('hi')">error</button>
+                <button mat-raised-button class="bg-info" (click)="snackBarTheme1Service.info('hi')">info</button>
+            </mat-card-content>
+        </mat-card>
+
+    </mat-card-content>
+</mat-card>

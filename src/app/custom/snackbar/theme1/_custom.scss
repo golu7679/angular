@@ -1,0 +1,60 @@
+.theme1-snackbar {
+    color: white;
+    --mdc-snackbar-container-color: var(--grey) !important;
+    // --mat-mdc-snack-bar-button-color: var(--white-color); // whitesmoke !important
+    position: relative;
+    overflow: hidden;
+
+    .mdc-snackbar__surface::before {
+        position: absolute;
+        content: "";
+        width: 140px;
+        height: 90px;
+        border-radius: 50%;
+        left: -40px;
+        z-index: -1;
+        top: -10px;
+        filter: blur(56px);
+    }
+}
+
+.theme1-success {
+    .mdc-snackbar__surface::before {
+        background: var(--success);
+    }
+
+    .mat-icon {
+        color: var(--success);
+    }
+}
+
+.theme1-error {
+    .mdc-snackbar__surface::before {
+        background: var(--error);
+    }
+
+    .mat-icon {
+        color: var(--error);
+    }
+}
+
+
+.theme1-warning {
+    .mdc-snackbar__surface::before {
+        background: var(--warning);
+    }
+
+    .mat-icon {
+        color: var(--warning);
+    }
+}
+
+.theme1-info {
+    .mdc-snackbar__surface::before {
+        background: var(--info);
+    }
+
+    .mat-icon {
+        color: var(--info);
+    }
+}

@@ -1,8 +1,7 @@
 import { NgModule } from "@angular/core";
 
 @NgModule({
-    declarations: [],
-    imports: []
+  declarations: [],
+  imports: []
 })
-
-export class DirectiveModule { }
+export class DirectiveModule {}

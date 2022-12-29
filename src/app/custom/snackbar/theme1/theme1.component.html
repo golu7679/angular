@@ -1,0 +1,7 @@
+<div class="custom-snackBar">
+    <mat-icon>{{data.icon}}</mat-icon>
+    &nbsp;
+    <span>{{data?.message || "Item saved successfully!"}}</span>
+    <div class="spacer"></div>
+    <button mat-button (click)="close()" color="white">Okay</button>
+</div>

@@ -1,13 +1,11 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ApiService {
-
-  constructor(private http: HttpClient) { }
-
+  constructor(private http: HttpClient) {}
 
   getApi() {
     return this.http.get("your_path");
@@ -16,6 +14,4 @@ export class ApiService {
   postApi(formData: FormData) {
     return this.http.post("url", formData);
   }
-
-  
 }

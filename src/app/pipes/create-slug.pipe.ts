@@ -1,15 +1,12 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'createSlug'
+  name: "createSlug"
 })
 export class CreateSlugPipe implements PipeTransform {
-
-  transform(value: string,): string {
+  transform(value: string): string {
     if (value) {
-      return value.replace(/\s+/g, '-').toLowerCase();
-    }
-    else return '';
+      return value.replace(/\s+/g, "-").toLowerCase();
+    } else return "";
   }
-
 }
