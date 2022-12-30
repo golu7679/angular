@@ -1,0 +1,35 @@
+.theme2-snackbar {
+    color: white;
+    position: relative;
+    overflow: hidden;
+    --mat-mdc-snack-bar-button-color: #fff; // whitesmoke !important
+
+    .mdc-snackbar__surface::before {
+        position: absolute;
+        content: "";
+        width: 140px;
+        height: 90px;
+        border-radius: 50%;
+        left: -40px;
+        z-index: -1;
+        top: -10px;
+        filter: blur(56px);
+        color: white;
+    }
+}
+
+.theme2-success {
+    --mdc-snackbar-container-color: var(--success) !important;
+}
+
+.theme2-error {
+    --mdc-snackbar-container-color: var(--error) !important;
+}
+
+.theme2-warning {
+    --mdc-snackbar-container-color: var(--warning) !important;
+}
+
+.theme2-info {
+    --mdc-snackbar-container-color: var(--info) !important;
+}

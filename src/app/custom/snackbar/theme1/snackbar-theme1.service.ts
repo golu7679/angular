@@ -16,44 +16,51 @@ export class SnackBarTheme1Service {
     this.config.duration = 15000;
   }
 
-  error(message: string, duration?: number) {
+  error(message?: string, duration?: number) {
     this.config.panelClass = ["theme1-snackbar", "theme1-error"];
     this.config.data = {
-      icon: 'cancel'
+      message,
+      icon: 'cancel',
+      snackbar: this.snackbar
     }
     this.config.duration = duration || this.config.duration;
-    this.show(message);
+    this.show();
   }
 
-  success(message: string) {
+  success(message?: string) {
     this.config.data = {
-      icon: 'check_circle'
+      message,
+      icon: 'check_circle',
+      snackbar: this.snackbar
     }
     this.config.panelClass = ["theme1-snackbar", "theme1-success"];
-    this.show(message);
+    this.show();
   }
 
-  warning(message: string) {
+  warning(message?: string) {
     this.config.data = {
-      icon: 'warning'
+      message,
+      icon: 'warning',
+      snackbar: this.snackbar
     }
     this.config.panelClass = ["theme1-snackbar", "theme1-warning"];
-    this.show(message);
+    this.show();
   }
 
-  info(message: string) {
+  info(message?: string) {
     this.config.data = {
-      icon: 'info'
+      message,
+      icon: 'info',
+      snackbar: this.snackbar
     }
     this.config.panelClass = ["theme1-snackbar", "theme1-info"];
-    this.show(message);
+    this.show();
   }
 
 
-  private show(message: string, config?: MatSnackBarConfig) {
+  private show(config?: MatSnackBarConfig) {
     config = config || this.config;
     this.zone.run(() => {
-      // this.snackbar.open(message, "x", config);
       this.snackbar.openFromComponent(Theme1Component, config);
     });
   }

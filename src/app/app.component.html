@@ -1,57 +1,43 @@
-<mat-card>
+<mat-card class="mp-1">
     <mat-card-header>
-        <mat-card-title>
-            SnackBars
-        </mat-card-title>
+        <mat-card-title> SnackBars </mat-card-title>
     </mat-card-header>
 
     <mat-card-content>
-
-        <mat-card>
-            <mat-card-title>
-                Default
-            </mat-card-title>
+        <mat-card class="mp-1">
+            <mat-card-title> Default </mat-card-title>
 
             <mat-card-content>
-                <button mat-raised-button color="primary">
-                    Default snackbar
-                </button>
+                <button mat-raised-button color="primary" (click)="openSnackbar()">Default snackbar</button>
             </mat-card-content>
         </mat-card>
 
-        <mat-card>
-            <mat-card-title>
-                Custom theme 1
-            </mat-card-title>
+        <mat-card class="mp-1">
+            <mat-card-title> Custom theme 1 </mat-card-title>
+            <mat-card-subtitle>Using template</mat-card-subtitle>
             <mat-card-content>
-                <button mat-raised-button class="bg-success mx-2"
-                    (click)="snackBarTheme1Service.success('success')">Show
-                    Success
-                    Snack
-                    Bar</button>
-                <button mat-raised-button class="bg-warning"
-                    (click)="snackBarTheme1Service.warning('warning')">Warning</button>
-                <button mat-raised-button class="bg-error" (click)="snackBarTheme1Service.error('hi')">error</button>
-                <button mat-raised-button class="bg-info" (click)="snackBarTheme1Service.info('hi')">info</button>
+                <button mat-raised-button class="bg-success mr-1"
+                    (click)="snackBarTheme1Service.success()">Success</button>
+                <button mat-raised-button class="bg-warning mr-1"
+                    (click)="snackBarTheme1Service.warning()">Warning</button>
+                <button mat-raised-button class="bg-error mr-1" (click)="snackBarTheme1Service.error()">error</button>
+                <button mat-raised-button class="bg-info mr-1" (click)="snackBarTheme1Service.info()">info</button>
             </mat-card-content>
         </mat-card>
 
-        <mat-card>
-            <mat-card-title>
-                Custom theme
-            </mat-card-title>
+        <mat-card class="mp-1">
+            <mat-card-title> Custom theme </mat-card-title>
+            <mat-card-subtitle>Using open method</mat-card-subtitle>
             <mat-card-content>
-                <button mat-raised-button class="bg-success mx-2"
-                    (click)="snackBarTheme1Service.success('success')">Show
-                    Success
-                    Snack
-                    Bar</button>
-                <button mat-raised-button class="bg-warning"
-                    (click)="snackBarTheme1Service.warning('warning')">Warning</button>
-                <button mat-raised-button class="bg-error" (click)="snackBarTheme1Service.error('hi')">error</button>
-                <button mat-raised-button class="bg-info" (click)="snackBarTheme1Service.info('hi')">info</button>
+                <button mat-raised-button class="bg-success mr-1"
+                    (click)="snackBarTheme2Service.success('success')">Success</button>
+                <button mat-raised-button class="bg-warning mr-1"
+                    (click)="snackBarTheme2Service.warning('warning')">Warning</button>
+                <button mat-raised-button class="bg-error mr-1"
+                    (click)="snackBarTheme2Service.error('error')">error</button>
+                <button mat-raised-button class="bg-info mr-1"
+                    (click)="snackBarTheme2Service.info('info')">info</button>
             </mat-card-content>
         </mat-card>
-
     </mat-card-content>
 </mat-card>

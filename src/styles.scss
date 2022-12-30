@@ -1,9 +1,9 @@
 // /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-    height: 100%;
-}
+// html,
+// body {
+//     height: 100%;
+// }
 
 body {
     margin: 0;
@@ -15,7 +15,7 @@ body {
 
 @import "assets/scss/variables";
 @import "src/app/custom/snackbar/theme1/custom";
-
+@import "src/app/custom/snackbar/theme2/custom";
 
 .bg-error {
     background-color: var(--error) !important;
@@ -40,4 +40,20 @@ body {
 .bg-grey {
     background-color: var(--grey) !important;
     color: white !important;
+}
+
+
+// margin-padding
+
+.mr-1 {
+    margin-right: 1em;
+}
+
+.m-1{
+    margin: 1em;
+}
+
+.mp-1{
+    margin: 1em;
+    padding: 1em;
 }
