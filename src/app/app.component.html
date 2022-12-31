@@ -1,3 +1,9 @@
+<div style="text-align: right;">
+    <mat-slide-toggle (ngModelChange)="darkModeToggleChange($event)" [(ngModel)]="isDarkThemeActive">
+        <mat-icon>{{isDarkThemeActive ?'dark_mode':'light_mode'}}</mat-icon>
+    </mat-slide-toggle>
+</div>
+
 <mat-card class="mp-1">
     <mat-card-header>
         <mat-card-title> SnackBars </mat-card-title>
@@ -39,5 +45,28 @@
                     (click)="snackBarTheme2Service.info('info')">info</button>
             </mat-card-content>
         </mat-card>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mp-1">
+
+    <mat-card-header>
+        <mat-card-title>Image error directive use</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <img src="assets/image/angular.pn" alt="data" width="100px" height="100px"><br>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mp-1">
+    <mat-card-header>
+        <mat-card-title>Json to CSV and Excel download</mat-card-title>
+        <mat-card-subtitle>Install exceljs, file-saver, @types/file-saver packages to download excel file
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <button mat-raised-button class="m-1" color="primary" (click)="json2csv.downloadFile()">Json to CSV</button>
+        <button mat-raised-button color="teal" (click)="json2excel.downloadExcelFile()"> Json to Excel </button>
     </mat-card-content>
 </mat-card>

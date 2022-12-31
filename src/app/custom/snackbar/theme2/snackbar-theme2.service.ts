@@ -2,35 +2,33 @@ import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Injectable({
-    providedIn: "root"
+  providedIn: "root"
 })
 export class SnackBarTheme2Service {
-    actionText = "OKAY";
-    constructor(private snackbar: MatSnackBar) { }
+  actionText = "OKAY";
+  constructor(private snackbar: MatSnackBar) {}
 
-    success(message: string) {
-        this.snackbar.open(message, this.actionText, {
-            panelClass: ['theme2-snackbar', 'theme2-success']
-        });
-    }
+  success(message: string) {
+    this.snackbar.open(message, this.actionText, {
+      panelClass: ["theme2-snackbar", "theme2-success"]
+    });
+  }
 
-    error(message: string) {
-        this.snackbar.open(message, this.actionText, {
-            panelClass: ['theme2-snackbar', 'theme2-error']
-        });
-    }
+  error(message: string) {
+    this.snackbar.open(message, this.actionText, {
+      panelClass: ["theme2-snackbar", "theme2-error"]
+    });
+  }
 
-    warning(message: string) {
-        this.snackbar.open(message, this.actionText, {
-            panelClass: ['theme2-snackbar', 'theme2-warning']
-        });
-    }
+  warning(message: string) {
+    this.snackbar.open(message, this.actionText, {
+      panelClass: ["theme2-snackbar", "theme2-warning"]
+    });
+  }
 
-    info(message: string) {
-        this.snackbar.open(message, this.actionText, {
-            panelClass: ['theme2-snackbar', 'theme2-info']
-        });
-    }
-
-
+  info(message: string) {
+    this.snackbar.open(message, this.actionText, {
+      panelClass: ["theme2-snackbar", "theme2-info"]
+    });
+  }
 }

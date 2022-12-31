@@ -20,9 +20,9 @@ export class SnackBarTheme1Service {
     this.config.panelClass = ["theme1-snackbar", "theme1-error"];
     this.config.data = {
       message,
-      icon: 'cancel',
+      icon: "cancel",
       snackbar: this.snackbar
-    }
+    };
     this.config.duration = duration || this.config.duration;
     this.show();
   }
@@ -30,9 +30,9 @@ export class SnackBarTheme1Service {
   success(message?: string) {
     this.config.data = {
       message,
-      icon: 'check_circle',
+      icon: "check_circle",
       snackbar: this.snackbar
-    }
+    };
     this.config.panelClass = ["theme1-snackbar", "theme1-success"];
     this.show();
   }
@@ -40,9 +40,9 @@ export class SnackBarTheme1Service {
   warning(message?: string) {
     this.config.data = {
       message,
-      icon: 'warning',
+      icon: "warning",
       snackbar: this.snackbar
-    }
+    };
     this.config.panelClass = ["theme1-snackbar", "theme1-warning"];
     this.show();
   }
@@ -50,13 +50,12 @@ export class SnackBarTheme1Service {
   info(message?: string) {
     this.config.data = {
       message,
-      icon: 'info',
+      icon: "info",
       snackbar: this.snackbar
-    }
+    };
     this.config.panelClass = ["theme1-snackbar", "theme1-info"];
     this.show();
   }
-
 
   private show(config?: MatSnackBarConfig) {
     config = config || this.config;

@@ -8,4 +8,4 @@ import { MaterialsModule } from "../materials.module";
   imports: [CommonModule, MaterialsModule],
   exports: [Theme1Component]
 })
-export class CustomModule { }
+export class CustomModule {}

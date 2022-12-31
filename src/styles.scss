@@ -1,9 +1,11 @@
 // /* You can add global styles to this file, and also import other style files */
 
-// html,
-// body {
-//     height: 100%;
-// }
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     margin: 0;
@@ -11,11 +13,12 @@ body {
 }
 
 /* Add application styles & imports to this file! */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 @import "assets/scss/variables";
 @import "src/app/custom/snackbar/theme1/custom";
 @import "src/app/custom/snackbar/theme2/custom";
+@import "assets/scss/theme";
 
 .bg-error {
     background-color: var(--error) !important;
@@ -49,11 +52,11 @@ body {
     margin-right: 1em;
 }
 
-.m-1{
+.m-1 {
     margin: 1em;
 }
 
-.mp-1{
+.mp-1 {
     margin: 1em;
     padding: 1em;
 }
