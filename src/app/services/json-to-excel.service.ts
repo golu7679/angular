@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import { Workbook } from 'exceljs';
-import * as fs from 'file-saver';
+import { Workbook } from "exceljs";
+import * as fs from "file-saver";
 
 @Injectable({
   providedIn: "root"
@@ -24,9 +24,9 @@ export class JsonToExcelService {
     //add data and file name and download
     workbook.xlsx.writeBuffer().then((data) => {
       const blob = new Blob([data], {
-        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
       });
-      fs.saveAs(blob, fname + '.xlsx');
+      fs.saveAs(blob, fname + ".xlsx");
     });
   }
 
@@ -46,9 +46,8 @@ export class JsonToExcelService {
       }
     ];
 
-    const fileName = "json2excel"
+    const fileName = "json2excel";
 
     this.generateFile(data, fileName, ["column1", "column2", "column3", "column4"]);
   }
-
 }

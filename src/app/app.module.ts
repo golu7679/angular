@@ -31,4 +31,4 @@ import { FormsModule } from "@angular/forms";
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: NetworkInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

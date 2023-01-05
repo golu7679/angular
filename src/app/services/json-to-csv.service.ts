@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class JsonToCsvService {
-  constructor() { }
+  constructor() {}
 
   private generateFile(csvData: any, filename: any) {
     const blob = new Blob(["\ufeff" + csvData], {

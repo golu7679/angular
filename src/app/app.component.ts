@@ -12,7 +12,6 @@ import { JsonToExcelService } from "./services/json-to-excel.service";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-
   isDarkThemeActive = false;
 
   constructor(
@@ -22,12 +21,11 @@ export class AppComponent {
     public snackBarTheme2Service: SnackBarTheme2Service,
     public json2csv: JsonToCsvService,
     public json2excel: JsonToExcelService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
-    const darkMode = localStorage.getItem('darkMode');
-    if (darkMode)
-      this.darkModeToggleChange(JSON.parse(darkMode))
+    const darkMode = localStorage.getItem("darkMode");
+    if (darkMode) this.darkModeToggleChange(JSON.parse(darkMode));
   }
 
   openSnackbar() {
@@ -36,12 +34,11 @@ export class AppComponent {
 
   darkModeToggleChange(newValue: boolean): void {
     if (newValue) {
-      this.document.body.classList.add('dark-mode');
+      this.document.body.classList.add("dark-mode");
     } else {
-      this.document.body.classList.remove('dark-mode');
+      this.document.body.classList.remove("dark-mode");
     }
-    localStorage.setItem('darkMode', JSON.stringify(newValue));
+    localStorage.setItem("darkMode", JSON.stringify(newValue));
     this.isDarkThemeActive = newValue;
   }
-
 }
