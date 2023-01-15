@@ -17,6 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "exceljs",
+              "file-saver"
+            ],
             "outputPath": "dist/angular-dev-code",
             "index": "src/index.html",
             "main": "src/main.ts",
