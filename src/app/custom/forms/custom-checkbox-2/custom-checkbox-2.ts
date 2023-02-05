@@ -42,23 +42,44 @@ export class CustomCheckboxComponent implements ControlValueAccessor, OnInit {
         //   console.log(checkboxDta.checked)
         // })
     }
+    contains(value: any): boolean {
+        if (this.selectedItemList instanceof Array) {
+            return this.selectedItemList.indexOf(value) > -1;
+        } else if (!!this.selectedItemList) {
+            return this.selectedItemList === value;
+        }
+
+        return false;
+    }
+
+    private add(value: any) {
+        if (!this.contains(value)) {
+            if (this.selectedItemList instanceof Array) {
+                this.selectedItemList.push(value);
+            } else {
+                this.selectedItemList = [value];
+            }
+            this.onChange(this.selectedItemList);
+        }
+    }
+
+    private remove(value: any) {
+        const index = this.selectedItemList.indexOf(value);
+        if (!this.selectedItemList || index < 0) {
+            return;
+        }
+
+        this.selectedItemList.splice(index, 1);
+        this.onChange(this.selectedItemList);
+    }
 
     update(event: boolean) {
-        console.log(event)
-        if (event) {
-            this.selectedItemList.push(this.value)
+        if (!event && this.contains(this.value)) {
+            this.remove(this.value)
         }
         else {
-            // const index = this.selectedItemList.indexOf(this.value);
-            // console.log(index)
-            // if (index !== -1) {
-            //   this.selectedItemList = this.selectedItemList.slice(index, 1);
-            // }
-            this.selectedItemList = this.selectedItemList.filter(arrayItem => !this.selectedItemList.includes(this.value));
-
+            this.add(this.value);
         }
-        console.log(this.selectedItemList);
-        this.onChange(this.selectedItemList);
     }
 
     ngOnInit(): void {
